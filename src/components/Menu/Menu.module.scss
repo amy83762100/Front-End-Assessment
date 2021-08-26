@@ -97,7 +97,6 @@
     left: 7rem;
     font-size: 3rem;
     letter-spacing: 0.5rem;
-    color: #ffffff;
   }
   &__checkbox:checked ~ [data-logo-color="red"] {
     color: #d34848;
@@ -115,7 +114,6 @@
   &__icon {
     position: relative;
     margin-top: 3.5rem;
-    color: #ffffff;
     &,
     &::before,
     &::after {

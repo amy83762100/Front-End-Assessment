@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Menu from "../../Menu/Menu";
 import BtnWhite from "../../Button/BtnWhite";
 import classes from "./Yellow.module.scss";
@@ -16,6 +17,9 @@ function Yellow() {
         <h2>Experience concerts up close and personal.</h2>
         <BtnWhite content="SEE DEMO" />
       </div>
+      <Link to="/Pricing" className={classes["btn__try"]}>
+        <button className="btn btn-color">TRY IT NOW</button>
+      </Link>
     </section>
   );
 }

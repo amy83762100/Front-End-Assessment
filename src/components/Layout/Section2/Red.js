@@ -56,7 +56,7 @@ function Red(props) {
         <Cursor />
       </div>
       <Link to="/Pricing" className={classes["btn__try"]}>
-        <BtnWhite content="TRY IT NOW" />
+        <button className="btn btn-color">TRY IT NOW</button>
       </Link>
     </section>
   );

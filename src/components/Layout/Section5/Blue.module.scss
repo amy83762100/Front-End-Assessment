@@ -1,0 +1,36 @@
+.blue {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #1fe1e9;
+  overflow: hidden;
+  padding: 0 10rem;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+    .img {
+      &__left {
+        margin: 10rem 0 -10rem -5rem;
+      }
+      &__right {
+        margin: -5rem -5rem 0 0;
+      }
+    }
+  }
+  &__right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -3,7 +3,6 @@ function BtnWhite(props) {
     let x = event.pageX - event.target.offsetLeft;
     event.target.style.setProperty("--x", x + "px");
     event.target.style.setProperty("--y", 20 + "px");
-    console.log(x, event.target.offsetTop);
   }
   return (
     <button className="btn btn-white" onMouseMove={changeColor}>

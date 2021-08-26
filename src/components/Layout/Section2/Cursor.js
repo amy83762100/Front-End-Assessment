@@ -21,7 +21,6 @@ function Cursor() {
         else {
           cursorRef.current.style.transform = `scale(${1})`;
         }
-        console.log(cursorRef.current.offsetTop);
         cursorRef.current.style.left = `${mouseX}px`;
         cursorRef.current.style.top = `${mouseY}px`;
       }
