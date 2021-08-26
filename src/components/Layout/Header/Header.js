@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import Menu from "../../Menu/Menu";
 import Slider from "./Slider";
 import classes from "./Header.module.scss";
-import Image1 from "../../../assets/Image_1.png";
-import Image2 from "../../../assets/Image_2.png";
-import Image3 from "../../../assets/Image_3.png";
+import Image1 from "../../../assets/Image_1@2x.png";
+import Image2 from "../../../assets/Image_2@2x.png";
+import Image3 from "../../../assets/Image_3@2x.png";
 const slides = [Image1, Image2, Image3];
 const Header = (props) => {
   return (

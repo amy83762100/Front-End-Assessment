@@ -4,7 +4,6 @@ import classes from "./Yellow.module.scss";
 function Yellow() {
   return (
     <section className={classes.yellow}>
-      <canvas> </canvas>
       <Menu
         backgroundColor="#0B0B0B"
         logoColor="yellow"

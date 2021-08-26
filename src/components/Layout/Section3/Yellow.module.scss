@@ -6,7 +6,7 @@
   color: white;
   padding: 0 10rem;
   display: flex;
-  background-image: url(../../../assets/Image_4.png);
+  // background-image: url(../../../assets/Image_4@2x.png);
   background-position: center right;
   background-size: 145%;
   &__right {
@@ -21,10 +21,4 @@
   &__left {
     flex: 3;
   }
-}
-canvas {
-  position: absolute;
-  width: 100%;
-  background-color: #ffb33f;
-  z-index: 0;
 }

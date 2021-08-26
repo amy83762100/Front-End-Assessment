@@ -4,8 +4,8 @@ import Cursor from "./Cursor";
 import BtnWhite from "../../Button/BtnWhite";
 import music from "../../../assets/music.mp3";
 import classes from "./Red.module.scss";
-import mediumLeft from "../../../assets/medium17.png";
-import mediumRight from "../../../assets/medium27.png";
+import mediumLeft from "../../../assets/medium17@2x.png";
+import mediumRight from "../../../assets/medium27@2x.png";
 function Red(props) {
   const audioContext = new AudioContext();
 
