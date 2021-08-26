@@ -1,0 +1,60 @@
+.red {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #d34848;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  padding: 0 10rem;
+  color: #d34848;
+  &__left {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    color: #d34848;
+  }
+  &__right {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+    height: fit-content;
+    align-self: center;
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    img {
+      width: 40%;
+      height: auto;
+      &:hover ~ .cursor {
+        content: "click";
+      }
+    }
+    .img {
+      &__left {
+        margin-bottom: 5rem;
+      }
+      &__right {
+        margin-top: 5rem;
+      }
+    }
+  }
+  .btn__try {
+    color: #d34848;
+    position: absolute;
+    width: 100%;
+    top: 4rem;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4rem;
+    text-decoration: none;
+  }
+}

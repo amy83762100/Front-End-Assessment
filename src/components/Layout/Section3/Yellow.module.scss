@@ -1,0 +1,30 @@
+.yellow {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background-color: #ffb33f;
+  color: white;
+  padding: 0 10rem;
+  display: flex;
+  background-image: url(../../../assets/Image_4.png);
+  background-position: center right;
+  background-size: 145%;
+  &__right {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: #ffb33f;
+    margin-left: 3rem;
+  }
+  &__left {
+    flex: 3;
+  }
+}
+canvas {
+  position: absolute;
+  width: 100%;
+  background-color: #ffb33f;
+  z-index: 0;
+}
