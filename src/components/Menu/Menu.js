@@ -22,14 +22,14 @@ const Menu = (props) => {
       <nav className={classes.menu__nav}>
         <ul className={classes.menu__list} data-color={props.selectColor}>
           <li className={classes.menu__item}>
-            <a href="#about" className={classes.menu__link}>
+            <Link to="/" className={classes.menu__link}>
               What is it
-            </a>
+            </Link>
           </li>
           <li className={classes.menu__item}>
-            <Link to="#Perks" className={classes.menu__link}>
+            <a href="#Perks" className={classes.menu__link}>
               Perks
-            </Link>
+            </a>
           </li>
           <li className={classes.menu__item}>
             <Link to="/Pricing" className={classes.menu__link}>

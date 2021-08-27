@@ -1,9 +1,9 @@
 import { Route, Switch } from "react-router-dom";
 import { Fragment } from "react";
 import MainLanding from "./pages/MainLanding";
-import Pricing from "./pages/Pricing";
 import Payment from "./pages/Payment";
 import "./App.scss";
+import PricingPage from "./pages/PricingPage";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <MainLanding />
         </Route>
         <Route path="/pricing">
-          <Pricing />
+          <PricingPage />
         </Route>
         <Route path="/payment">
           <Payment />

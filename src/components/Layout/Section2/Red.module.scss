@@ -6,7 +6,15 @@
   color: white;
   overflow: hidden;
   display: flex;
-  padding: 0 10rem;
+  padding: 20rem 10rem 10rem 10rem;
+  @media only screen and (max-width: 37.5em) {
+    padding: 15rem 5rem 10rem 5rem;
+    flex-direction: column;
+    height: fit-content;
+    &__left {
+      margin-bottom: 5rem;
+    }
+  } //600px
   &__left {
     width: 100%;
     height: 100%;
@@ -49,5 +57,32 @@
     position: absolute;
     top: 4rem;
     right: 4rem;
+    @media only screen and (max-width: 37.5em) {
+      right: 1rem;
+      transform: scale(0.7);
+    } //600px
+  }
+}
+.cursor {
+  z-index: 3000;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #fff;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "click";
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 2px;
+  &:active {
+    transform: scale(1.01);
+    border: 2px solid #fff;
   }
 }

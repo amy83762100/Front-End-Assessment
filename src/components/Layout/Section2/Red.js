@@ -1,6 +1,6 @@
+import { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Menu from "../../Menu/Menu";
-import Cursor from "./Cursor";
 import BtnWhite from "../../Button/BtnWhite";
 import music from "../../../assets/music.mp3";
 import classes from "./Red.module.scss";
@@ -8,7 +8,7 @@ import mediumLeft from "../../../assets/medium17@2x.png";
 import mediumRight from "../../../assets/medium27@2x.png";
 function Red(props) {
   const audioContext = new AudioContext();
-
+  const rightRef = useRef(null);
   let audio;
   fetch(music)
     .then((data) => data.arrayBuffer())
@@ -29,6 +29,19 @@ function Red(props) {
       audioContext.suspend();
     } else audioContext.resume();
   }
+
+  const cursorRef = useRef(null);
+  useEffect(() => {
+    document.addEventListener("mousemove", (event) => {
+      if (cursorRef.current) {
+        const mouseX = event.pageX - rightRef.current.offsetLeft - 40;
+        const mouseY =
+          event.pageY - window.innerHeight - rightRef.current.offsetTop - 40;
+        cursorRef.current.style.left = `${mouseX}px`;
+        cursorRef.current.style.top = `${mouseY}px`;
+      }
+    });
+  }, []);
   return (
     <section className={classes.red}>
       <Menu
@@ -42,7 +55,7 @@ function Red(props) {
         <h2>Experience live versions of your favorite songs.</h2>
         <BtnWhite content="See Demo" />
       </div>
-      <div className={classes["red__right"]} onClick={playMusic}>
+      <div className={classes["red__right"]} onClick={playMusic} ref={rightRef}>
         <img
           src={mediumLeft}
           alt="Left Speaker"
@@ -53,7 +66,9 @@ function Red(props) {
           alt="Right Speaker"
           className={classes["img__right"]}
         ></img>
-        <Cursor />
+        <div className={classes.cursor} ref={cursorRef}>
+          Click
+        </div>
       </div>
       <Link to="/Pricing" className={classes["btn__try"]}>
         <button className="btn btn-color">TRY IT NOW</button>

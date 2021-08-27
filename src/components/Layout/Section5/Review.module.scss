@@ -1,0 +1,19 @@
+.review {
+  &__title {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  q {
+    font-size: 2.2rem;
+    color: #191919;
+    line-height: 1.6;
+  }
+  &__stars {
+    margin-bottom: 3rem;
+    & > *:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}

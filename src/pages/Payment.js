@@ -1,4 +1,10 @@
+import { Fragment } from "react";
+import Footer from "../components/Layout/Footer/Footer";
 function Payment() {
-  return <div>Payment</div>;
+  return (
+    <Fragment>
+      <Footer />
+    </Fragment>
+  );
 }
 export default Payment;

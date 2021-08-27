@@ -1,0 +1,42 @@
+.plan {
+  letter-spacing: 1.5px;
+  &__name {
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    &::after {
+      content: " ";
+      background-color: currentColor;
+      height: 1px;
+      width: 8rem;
+      display: block;
+      margin: 1rem 0;
+    }
+  }
+  &__period {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: inherit;
+  }
+  &__price {
+    font-size: 8.4rem;
+    font-weight: bold;
+  }
+  &__features {
+    list-style: none;
+    font-size: 3rem;
+    color: #fff;
+    margin: 2rem 0;
+    li {
+      margin-bottom: 1rem;
+      span {
+        margin-left: 1rem;
+      }
+    }
+  }
+  .btn__select {
+    button {
+      width: 21rem;
+      color: #fff;
+    }
+  }
+}
