@@ -1,8 +1,14 @@
+.btn {
+  align-self: flex-end;
+  justify-self: start;
+  height: 10rem;
+}
 .perks {
   height: 100%;
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
 
   h1 {
     margin: 2.5rem 0;

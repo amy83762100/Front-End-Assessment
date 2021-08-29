@@ -1,50 +1,38 @@
+.btn {
+  align-self: flex-end;
+  justify-self: start;
+  color: #ffb33f;
+  &__try {
+    color: inherit;
+  }
+}
 .frontSeats {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  @media only screen and (max-width: 37.5em) {
+    flex-direction: column;
+  } //600px
   &__right {
     flex: 4;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     color: #ffb33f;
     margin-left: 3rem;
-    &::before,
-    &::after {
-      content: "";
-      height: 40%;
-      width: 100%;
-      z-index: 1;
-    }
-    &::before {
-      margin-top: -10rem;
-      transform: translateY(50%);
-    }
-    &::after {
-      transform: translateY(-60%);
-    }
+    z-index: 1;
+    @media only screen and (max-width: 37.5em) {
+      margin: 10rem 0 0 0;
+    } //600px
 
     h1 {
       position: relative;
-      &:after {
-        content: "FRONT ROW SEATS";
-        color: rgba($color: #fff, $alpha: 0.5);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-      }
     }
     h2 {
       position: relative;
       font-weight: normal;
-      &:after {
-        content: "Experience concerts up close and personal.";
-        color: rgba($color: #3ee6f4, $alpha: 0.3);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1;
-      }
     }
   }
   &__right:hover ~ &__image &__image__reveal {
@@ -59,19 +47,23 @@
     & > * {
       background: url("../../../assets/Image_4@2x.png") bottom 55% left 100%
         no-repeat fixed;
-      background-size: 145%;
+      background-size: 140%;
       border-radius: 50%;
       position: absolute;
+      @media only screen and (max-width: 37.5em) {
+        display: none;
+        opacity: 0;
+      } //600px
     }
     &__fixed01 {
       top: 10%;
-      left: 27%;
+      left: 29%;
       width: 22rem;
       height: 22rem;
     }
     &__fixed02 {
       top: 32%;
-      left: 13%;
+      left: 16%;
       width: 32rem;
       height: 32rem;
     }
@@ -82,7 +74,7 @@
       height: 32rem;
     }
     &__reveal {
-      top: 35%;
+      top: 42%;
       left: 35%;
       width: 11rem;
       height: 11rem;

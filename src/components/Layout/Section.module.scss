@@ -4,28 +4,21 @@
   width: 100%;
   color: white;
   overflow: hidden;
-  display: flex;
-  padding: 15rem 10rem 10rem 10rem;
+  padding: 4rem 10rem 10rem 10rem;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
 
   @media only screen and (max-width: 37.5em) {
-    padding: 15rem 5rem 10rem 5rem;
+    padding: 4rem 5rem 10rem 5rem;
     height: fit-content !important;
     flex-direction: column;
-    & > *:not(:last-child) {
-      margin-bottom: 5rem;
+
+    & > *:last-child {
+      margin-top: 5rem;
+      height: fit-content;
     }
   } //600px
-  .btn__try {
-    position: absolute;
-    top: 4rem;
-    right: 4rem;
-    @media only screen and (max-width: 37.5em) {
-      right: 1rem;
-      transform: scale(0.7);
-    } //600px
-  }
 }

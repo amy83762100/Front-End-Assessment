@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Menu from "../../Menu/Menu";
 import Slider from "./Slider";
 import classes from "./Header.module.scss";
+import btnStyle from "../../Button/Btn.module.scss";
 import Image1 from "../../../assets/Image_1@2x.png";
 import Image2 from "../../../assets/Image_2@2x.png";
 import Image3 from "../../../assets/Image_3@2x.png";
@@ -24,7 +25,10 @@ const Header = (props) => {
           comfort of your own home.
         </p>
         <Link to="/pricing">
-          <button className="btn btn-color" content="TRY IT NOW">
+          <button
+            className={`${btnStyle.btn} ${btnStyle.btn__color}`}
+            content="TRY IT NOW"
+          >
             TRY IT NOW
           </button>
         </Link>

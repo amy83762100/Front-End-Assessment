@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { Link } from "react-router-dom";
 import Menu from "../Menu/Menu";
 import classes from "./Section.module.scss";
 function Section(props) {
@@ -58,13 +57,13 @@ function Section(props) {
         id={props.menuId}
       />
       {props.children}
-      {props.tryBtn && (
+      {/* {props.tryBtn && (
         <Link to="/pricing" className={classes["btn__try"]}>
           <button className="btn btn-color" content="TRY IT NOW">
             TRY IT NOW
           </button>
         </Link>
-      )}
+      )} */}
     </section>
   );
 }

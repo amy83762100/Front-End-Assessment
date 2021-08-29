@@ -11,20 +11,22 @@ function Hook() {
     //     id="menu6"
     //   />
     <Section mainColor="black" menuId="menu6" tryBtn={false} height={75}>
-      <div className={classes["hook__left"]}>
-        <h1>GET EXP|CON NOW</h1>
-        <h2>Purchase and download the app.</h2>
-      </div>
-      <div className={classes["hook__right"]}>
-        <Link to="/pricing">
-          <button
-            className="btn btn-color"
-            content="TRY IT NOW"
-            style={{ transform: "scale(1.2)" }}
-          >
-            TRY IT NOW
-          </button>
-        </Link>
+      <div className={classes.hook}>
+        <div className={classes["hook__left"]}>
+          <h1>GET EXP|CON NOW</h1>
+          <h2>Purchase and download the app.</h2>
+        </div>
+        <div className={classes["hook__right"]}>
+          <Link to="/pricing">
+            <button
+              className="btn btn-color"
+              content="TRY IT NOW"
+              style={{ transform: "scale(1.2)" }}
+            >
+              TRY IT NOW
+            </button>
+          </Link>
+        </div>
       </div>
     </Section>
     // </section>

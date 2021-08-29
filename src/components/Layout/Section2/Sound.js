@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Section from "../Section";
 import BtnWhite from "../../Button/BtnWhite";
 import music from "../../../assets/music.mp3";
@@ -45,29 +46,48 @@ function Sound(props) {
     <Section
       mainColor="red"
       menuId="menu2"
-      tryBtn={true}
+      tryBtn="white"
       sectionOffsetTop={(parentOffsetTop) =>
         setParentOffsetTop(parentOffsetTop)
       }
     >
-      <div className={classes["red__left"]}>
-        <h1>Superior Sound</h1>
-        <h2>Experience live versions of your favorite songs.</h2>
-        <BtnWhite content="See Demo" offsetTop={parentOffsetTop} />
+      <div className={classes.btn}>
+        <Link to="/pricing" className={classes["btn__try"]}>
+          <BtnWhite
+            content="Try It Now"
+            backgroundColor={"#1FE1E9"}
+            offsetTop={parentOffsetTop}
+          />
+        </Link>
       </div>
-      <div className={classes["red__right"]} onClick={playMusic} ref={rightRef}>
-        <img
-          src={mediumLeft}
-          alt="Left Speaker"
-          className={classes["img__left"]}
-        ></img>
-        <img
-          src={mediumRight}
-          alt="Right Speaker"
-          className={classes["img__right"]}
-        ></img>
-        <div className={classes.cursor} ref={cursorRef}>
-          Click
+      <div className={classes.red}>
+        <div className={classes["red__left"]}>
+          <h1>Superior Sound</h1>
+          <h2>Experience live versions of your favorite songs.</h2>
+          <BtnWhite
+            content="See Demo"
+            backgroundColor={"#1FE1E9"}
+            offsetTop={parentOffsetTop}
+          />
+        </div>
+        <div
+          className={classes["red__right"]}
+          onClick={playMusic}
+          ref={rightRef}
+        >
+          <img
+            src={mediumLeft}
+            alt="Left Speaker"
+            className={classes["img__left"]}
+          ></img>
+          <img
+            src={mediumRight}
+            alt="Right Speaker"
+            className={classes["img__right"]}
+          ></img>
+          <div className={classes.cursor} ref={cursorRef}>
+            Click
+          </div>
         </div>
       </div>
     </Section>
