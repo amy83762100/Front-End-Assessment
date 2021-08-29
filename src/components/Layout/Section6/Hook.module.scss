@@ -1,36 +1,18 @@
 .hook {
-  position: relative;
-  height: 75vh;
-  width: 100%;
-  background-color: #191919;
-  overflow: hidden;
-  padding: 20rem 10rem 10rem 10rem;
-  color: white;
-  @media only screen and (max-width: 37.5em) {
-    padding: 15rem 5rem 10rem 5rem;
-    flex-direction: column;
-    height: fit-content;
-    &__left {
-      margin-bottom: 4rem;
-    }
-  } //600px
-  h1 {
-    color: #d34848;
-    letter-spacing: 5px;
-  }
-  h2 {
-    color: white;
-    font-weight: lighter;
-    letter-spacing: 1px;
-  }
-  display: flex;
-  align-items: center;
   &__left {
     flex: 3;
+    h1 {
+      color: #d34848;
+      letter-spacing: 5px;
+    }
+    h2 {
+      color: white;
+      font-weight: lighter;
+      letter-spacing: 1px;
+    }
   }
-  .btn__try {
+  &__right {
     flex: 2;
     text-align: center;
-    transform: scale(1.2);
   }
 }

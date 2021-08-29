@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 import Header from "../components/Layout/Header/Header";
-import Red from "../components/Layout/Section2/Red";
-import Yellow from "../components/Layout/Section3/Yellow";
+import Sound from "../components/Layout/Section2/Sound";
+import FrontSeats from "../components/Layout/Section3/FrontSeats";
 import Perks from "../components/Layout/Section4/Perks";
-import Blue from "../components/Layout/Section5/Blue";
+import Reviews from "../components/Layout/Section5/Reviews";
 import Hook from "../components/Layout/Section6/Hook";
 import Footer from "../components/Layout/Footer/Footer";
 function MainLanding() {
@@ -14,10 +14,10 @@ function MainLanding() {
   return (
     <Fragment>
       <Header />
-      <Red />
-      <Yellow />
+      <Sound />
+      <FrontSeats />
       <Perks mainColor="black" menuId="menu4" tryBtn={true} />
-      <Blue />
+      <Reviews />
       <Hook />
       <Footer />
     </Fragment>

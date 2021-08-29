@@ -1,7 +1,7 @@
 import { Route, Switch } from "react-router-dom";
 import { Fragment } from "react";
 import MainLanding from "./pages/MainLanding";
-import Payment from "./pages/Payment";
+import PaymentPage from "./pages/PaymentPage";
 import "./App.scss";
 import PricingPage from "./pages/PricingPage";
 
@@ -16,7 +16,7 @@ function App() {
           <PricingPage />
         </Route>
         <Route path="/payment">
-          <Payment />
+          <PaymentPage />
         </Route>
       </Switch>
     </Fragment>

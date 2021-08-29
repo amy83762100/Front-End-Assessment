@@ -1,0 +1,139 @@
+.payment {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  letter-spacing: 1px;
+  &__title {
+    color: #000000;
+    margin-bottom: 3rem;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-weight: normal;
+      font-size: 2.8rem;
+    }
+    &__radio {
+      display: flex;
+      font-size: 2.3rem;
+      font-weight: bold;
+
+      label {
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        & > *:first-child {
+          margin-right: 1rem;
+        }
+      }
+
+      &__basic {
+        color: #d24848;
+        position: relative;
+      }
+      &__advanced {
+        color: #ffb33f;
+        position: relative;
+      }
+      &__pro {
+        color: #1fe1e9;
+        position: relative;
+      }
+      & > *:not(:last-child) {
+        margin-right: 4.3rem;
+      }
+      &__button {
+        height: 1.5rem;
+        width: 1.5rem;
+        border: 2px solid #000000;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+      }
+      input {
+        display: none;
+      }
+      input:checked ~ label &__button {
+        background-color: currentColor;
+        border: 2px solid currentColor;
+      }
+    }
+    &__bottom {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 8rem;
+      @media only screen and (max-width: 37.5em) {
+        flex-direction: column;
+      } //600px
+      label {
+        font-size: 1.375rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      input,
+      select {
+        margin-top: 0.5rem;
+        width: 100%;
+        border: 2px solid #000000;
+        padding: 1.2rem 2.3rem;
+        font-family: inherit;
+        font-size: 1.75rem;
+        letter-spacing: 1px;
+        &:focus {
+          border-bottom: 4px solid #2f1fe9;
+        }
+      }
+      &__billing {
+        flex: 1;
+        margin-right: 20rem;
+        @media only screen and (max-width: 37.5em) {
+          margin: 0 0 5rem 0;
+        } //600px
+      }
+      &__creditCard {
+        flex: 1;
+      }
+      &__itemBox > * {
+        margin-bottom: 1.5rem;
+      }
+      &__twoItem {
+        display: flex;
+        justify-content: space-between;
+        & > *:nth-child(n) {
+          flex: 1;
+          &:not(:last-child) {
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+    .submit {
+      display: none;
+    }
+  }
+  .serviceTerm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    small {
+      width: 50%;
+      font-size: 1.375rem;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+      @media only screen and (max-width: 37.5em) {
+        width: 100%;
+      } //600px
+      a {
+        text-decoration: none;
+        color: #2f1fe9;
+        font-weight: bold;
+      }
+    }
+  }
+}

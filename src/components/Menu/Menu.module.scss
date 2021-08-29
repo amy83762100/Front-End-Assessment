@@ -1,9 +1,11 @@
 .menu {
+  color: inherit;
   &__checkbox {
     display: none;
   }
 
   &__button {
+    color: inherit;
     background-color: transparent;
     height: 7rem;
     width: 7rem;

@@ -24,7 +24,9 @@ const Header = (props) => {
           comfort of your own home.
         </p>
         <Link to="/Pricing">
-          <button className="btn btn-color">TRY IT NOW</button>
+          <button className="btn btn-color" content="TRY IT NOW">
+            TRY IT NOW
+          </button>
         </Link>
       </Slider>
     </header>

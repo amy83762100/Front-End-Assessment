@@ -1,23 +1,33 @@
 import { Link } from "react-router-dom";
-import Menu from "../../Menu/Menu";
+import Section from "../Section";
 import classes from "./Hook.module.scss";
 function Hook() {
   return (
-    <section className={classes.hook}>
-      <Menu
-        backgroundColor="#1FE1E9"
-        logoColor="white"
-        selectColor="black"
-        id="menu6"
-      />
+    // <section className={classes.hook}>
+    //   <Menu
+    //     backgroundColor="#1FE1E9"
+    //     logoColor="white"
+    //     selectColor="black"
+    //     id="menu6"
+    //   />
+    <Section mainColor="black" menuId="menu6" tryBtn={false} height={75}>
       <div className={classes["hook__left"]}>
         <h1>GET EXP|CON NOW</h1>
         <h2>Purchase and download the app.</h2>
       </div>
-      <Link to="/Pricing" className={classes["btn__try"]}>
-        <button className="btn btn-color">TRY IT NOW</button>
-      </Link>
-    </section>
+      <div className={classes["hook__right"]}>
+        <Link to="/Pricing">
+          <button
+            className="btn btn-color"
+            content="TRY IT NOW"
+            style={{ transform: "scale(1.2)" }}
+          >
+            TRY IT NOW
+          </button>
+        </Link>
+      </div>
+    </Section>
+    // </section>
   );
 }
 

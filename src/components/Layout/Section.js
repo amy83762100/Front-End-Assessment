@@ -1,9 +1,11 @@
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import Menu from "../Menu/Menu";
 import classes from "./Section.module.scss";
 function Section(props) {
   let menu = {
     backgroundColor: "#0B0B0B",
+    logoDefaultColor: "#FFFFFF",
     logoColor: props.mainColor,
     selectColor: props.mainColor,
   };
@@ -24,21 +26,30 @@ function Section(props) {
       backgroundColor = "#0B0B0B";
       break;
     default:
-      menu.backgroundColor = "#0000005C";
-      menu.logoColor = "white";
-      menu.selectColor = "black";
-      backgroundColor = "#707070";
+      menu.backgroundColor = "#0B0B0B";
+      menu.logoColor = "red";
+      menu.selectColor = "red";
+      backgroundColor = "#FFFFFF";
+      menu.logoDefaultColor = "#0B0B0B";
       break;
   }
   const sectionStyle = {
     backgroundColor: backgroundColor,
     height: `${props.height}vh`,
+    color: menu.logoDefaultColor,
   };
+  const sectionRef = useRef(null);
+  // console.log(sectionRef.current);
   return (
     <section
       id={props.sectionId}
       className={classes.section}
       style={sectionStyle}
+      ref={sectionRef}
+      onMouseEnter={() =>
+        props.sectionOffsetTop &&
+        props.sectionOffsetTop(sectionRef.current.offsetTop)
+      }
     >
       <Menu
         backgroundColor={menu.backgroundColor}
@@ -49,7 +60,9 @@ function Section(props) {
       {props.children}
       {props.tryBtn && (
         <Link to="/Pricing" className={classes["btn__try"]}>
-          <button className="btn btn-color">TRY IT NOW</button>
+          <button className="btn btn-color" content="TRY IT NOW">
+            TRY IT NOW
+          </button>
         </Link>
       )}
     </section>

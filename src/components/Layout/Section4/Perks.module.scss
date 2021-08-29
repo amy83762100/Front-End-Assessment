@@ -1,14 +1,11 @@
 .perks {
+  height: 100%;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  @media only screen and (max-width: 37.5em) {
-    padding: 15rem 5rem 10rem 5rem;
-    height: fit-content;
-  } //600px
+  justify-content: space-between;
 
   h1 {
-    margin: 3rem 0;
+    margin: 2.5rem 0;
   }
   .content {
     display: flex;

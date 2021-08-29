@@ -5,7 +5,7 @@
   color: white;
   overflow: hidden;
   display: flex;
-  padding: 20rem 10rem 10rem 10rem;
+  padding: 15rem 10rem 10rem 10rem;
 
   display: flex;
   align-items: center;
@@ -14,6 +14,10 @@
   @media only screen and (max-width: 37.5em) {
     padding: 15rem 5rem 10rem 5rem;
     height: fit-content !important;
+    flex-direction: column;
+    & > *:not(:last-child) {
+      margin-bottom: 5rem;
+    }
   } //600px
   .btn__try {
     position: absolute;
