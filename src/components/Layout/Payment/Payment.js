@@ -121,8 +121,8 @@ function Payment() {
                 </div>
                 <div>
                   <label htmlFor="country">Country</label>
-                  <select id="country" name="country" defaultValue required>
-                    <option disabled value></option>
+                  <select id="country" name="country" required>
+                    <option value=""></option>
                     {[...countryOptions]}
                   </select>
                 </div>
@@ -157,7 +157,7 @@ function Payment() {
                   <div>
                     <label htmlFor="expireMonth">Expire Month</label>
                     <select id="expireMonth" name="expireMonth" required>
-                      <option disabled value></option>
+                      <option value=""></option>
                       {[...Array(12)].map((_, i) => (
                         <option value={i + 1} key={i}>
                           {`${i + 1}`.padStart(2, 0)}
@@ -167,13 +167,8 @@ function Payment() {
                   </div>
                   <div>
                     <label htmlFor="expireYear">Expire Year</label>
-                    <select
-                      id="expireYear"
-                      name="expireYear"
-                      defaultValue
-                      required
-                    >
-                      <option disabled value></option>
+                    <select id="expireYear" name="expireYear" required>
+                      <option value=""></option>
                       {[...Array(10)].map((_, i) => (
                         <option value={i + currentYear} key={i}>
                           {i + currentYear}

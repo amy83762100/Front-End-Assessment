@@ -23,7 +23,7 @@ const Header = (props) => {
           Experience your favorite artists like never before and from the
           comfort of your own home.
         </p>
-        <Link to="/Pricing">
+        <Link to="/pricing">
           <button className="btn btn-color" content="TRY IT NOW">
             TRY IT NOW
           </button>
