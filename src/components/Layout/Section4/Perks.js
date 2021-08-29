@@ -7,7 +7,7 @@ function Perks(props) {
       menuId={props.menuId}
       tryBtn={props.tryBtn}
       height={props.height}
-      sectionId="Perks"
+      sectionId="perks"
     >
       <div className={classes.perks}>
         <h1>Perks</h1>

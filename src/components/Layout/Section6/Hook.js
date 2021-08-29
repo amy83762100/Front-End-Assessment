@@ -16,7 +16,7 @@ function Hook() {
         <h2>Purchase and download the app.</h2>
       </div>
       <div className={classes["hook__right"]}>
-        <Link to="/Pricing">
+        <Link to="/pricing">
           <button
             className="btn btn-color"
             content="TRY IT NOW"

@@ -38,7 +38,7 @@ function Plan(props) {
           <span>{props.content.feature06}</span>
         </li>
       </ul>
-      <Link to="/Payment" className={classes["btn__select"]}>
+      <Link to="/payment" className={classes["btn__select"]}>
         <button
           className="btn"
           style={{ backgroundColor: props.content.color }}

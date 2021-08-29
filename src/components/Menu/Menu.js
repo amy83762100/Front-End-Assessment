@@ -42,12 +42,12 @@ const Menu = (props) => {
             </Link>
           </li>
           <li className={classes.menu__item}>
-            <a href="#Perks" className={classes.menu__link}>
+            <a href="#perks" className={classes.menu__link}>
               Perks
             </a>
           </li>
           <li className={classes.menu__item}>
-            <Link to="/Pricing" className={classes.menu__link}>
+            <Link to="/pricing" className={classes.menu__link}>
               Pricing
             </Link>
           </li>

@@ -59,7 +59,7 @@ function Section(props) {
       />
       {props.children}
       {props.tryBtn && (
-        <Link to="/Pricing" className={classes["btn__try"]}>
+        <Link to="/pricing" className={classes["btn__try"]}>
           <button className="btn btn-color" content="TRY IT NOW">
             TRY IT NOW
           </button>

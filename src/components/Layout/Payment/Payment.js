@@ -156,12 +156,7 @@ function Payment() {
                 <div className={classes["payment__form__bottom__twoItem"]}>
                   <div>
                     <label htmlFor="expireMonth">Expire Month</label>
-                    <select
-                      id="expireMonth"
-                      name="expireMonth"
-                      defaultValue
-                      required
-                    >
+                    <select id="expireMonth" name="expireMonth" required>
                       <option disabled value></option>
                       {[...Array(12)].map((_, i) => (
                         <option value={i + 1} key={i}>
