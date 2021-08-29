@@ -40,7 +40,11 @@ function Payment() {
     <Section mainColor="white" menuId="menu_payment1" height="180">
       <div className={classes.payment}>
         <h1 className={classes["payment__title"]}>Payment</h1>
-        <form className={classes["payment__form"]} netlify method="POST">
+        <form
+          className={classes["payment__form"]}
+          action="https://formspree.io/f/xzbyybye"
+          method="POST"
+        >
           <div>
             <h2>1. Select your plan</h2>
             <div className={classes["payment__form__radio"]}>
