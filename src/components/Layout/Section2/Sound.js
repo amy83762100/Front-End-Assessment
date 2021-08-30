@@ -33,7 +33,6 @@ function Sound(props) {
           audioRef.current.pause();
           audioRef.current.dataset.playing = "false";
         }
-        console.log(audioRef.current.dataset.playing);
       },
       false
     );
