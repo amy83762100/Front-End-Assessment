@@ -7,31 +7,77 @@ import classes from "./Sound.module.scss";
 import mediumLeft from "../../../assets/medium17@2x.png";
 import mediumRight from "../../../assets/medium27@2x.png";
 function Sound(props) {
-  const audioContext = new AudioContext();
   const rightRef = useRef(null);
+  const audioRef = useRef(null);
   const [parentOffsetTop, setParentOffsetTop] = useState(0);
-  let audio;
-  fetch(music)
-    .then((data) => data.arrayBuffer())
-    .then((arrayBuffer) => audioContext.decodeAudioData(arrayBuffer))
-    .then((decodedAudio) => {
-      audio = decodedAudio;
-    });
 
-  function playMusic() {
-    const playSound = audioContext.createBufferSource();
-    playSound.buffer = audio;
-    playSound.connect(audioContext.destination);
-    if (audioContext.state === "suspended") {
-      !audioContext.currentTime && playSound.start(audioContext.currentTime);
-      audioContext.resume();
-    } else if (audioContext.state === "running") {
-      audioContext.suspend();
-    }
-  }
+  // function playMusic() {
+  //   // check if context is in suspended state (autoplay policy)
+  //   if (audioContext.state === "suspended") {
+  //     audioContext.resume();
+  //   }
+  //   // play or pause track depending on state
+  //   if (playing === "false") {
+  //     audioRef.play();
+  //     playing = "true";
+  //   } else if (playing === "true") {
+  //     audioRef.pause();
+  //     playing = "false";
+  //   }
+  // }
+  // let audio;
+  // fetch(music)
+  //   .then((data) => data.arrayBuffer())
+  //   .then((arrayBuffer) => audioContext.decodeAudioData(arrayBuffer))
+  //   .then((decodedAudio) => {
+  //     audio = decodedAudio;
+  //   });
+
+  // function playMusic() {
+  //   const playSound = audioContext.createBufferSource();
+  //   playSound.buffer = audio;
+  //   playSound.connect(audioContext.destination);
+  //   if (audioContext.state === "suspended") {
+  //     !audioContext.currentTime && playSound.start(audioContext.currentTime);
+  //     audioContext.resume();
+  //   } else if (audioContext.state === "running") {
+  //     audioContext.suspend();
+  //   }
+  // }
 
   const cursorRef = useRef(null);
   useEffect(() => {
+    // for legacy browsers
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    const audioContext = new AudioContext();
+    const track = audioContext.createMediaElementSource(audioRef.current);
+    track.connect(audioContext.destination);
+    rightRef.current.addEventListener(
+      "click",
+      (event) => {
+        // check if context is in suspended state (autoplay policy)
+        if (audioContext.state === "suspended") {
+          audioContext.resume();
+        }
+        // play or pause track depending on state
+        if (audioRef.current.dataset.playing === "false") {
+          audioRef.current.play();
+          audioRef.current.dataset.playing = "true";
+        } else if (audioRef.current.dataset.playing === "true") {
+          audioRef.current.pause();
+          audioRef.current.dataset.playing = "false";
+        }
+        console.log(audioRef.current.dataset.playing);
+      },
+      false
+    );
+    audioRef.current.addEventListener(
+      "ended",
+      () => {
+        audioRef.current.dataset.playing = "false";
+      },
+      false
+    );
     document.addEventListener("mousemove", (event) => {
       if (cursorRef.current) {
         const mouseX = event.pageX - rightRef.current.offsetLeft - 40;
@@ -70,11 +116,8 @@ function Sound(props) {
             offsetTop={parentOffsetTop}
           />
         </div>
-        <div
-          className={classes["red__right"]}
-          onClick={playMusic}
-          ref={rightRef}
-        >
+        <div className={classes["red__right"]} ref={rightRef}>
+          <audio src={music} ref={audioRef} data-playing="false"></audio>
           <img
             src={mediumLeft}
             alt="Left Speaker"
@@ -85,6 +128,7 @@ function Sound(props) {
             alt="Right Speaker"
             className={classes["img__right"]}
           ></img>
+
           <div className={classes.cursor} ref={cursorRef}>
             Click
           </div>
