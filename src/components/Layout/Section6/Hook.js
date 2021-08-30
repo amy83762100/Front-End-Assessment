@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Section from "../Section";
 import classes from "./Hook.module.scss";
+import btnStyle from "../../Button/Btn.module.scss";
 function Hook() {
   return (
     // <section className={classes.hook}>
@@ -19,7 +20,7 @@ function Hook() {
         <div className={classes["hook__right"]}>
           <Link to="/pricing">
             <button
-              className="btn btn-color"
+              className={`${btnStyle.btn} ${btnStyle.btn__color}`}
               content="TRY IT NOW"
               style={{ transform: "scale(1.2)" }}
             >

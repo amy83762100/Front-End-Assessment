@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Section from "../Section";
 import classes from "./Perks.module.scss";
+import btnStyle from "../../Button/Btn.module.scss";
 function Perks(props) {
   return (
     <Section
@@ -13,7 +14,10 @@ function Perks(props) {
       <div className={classes.btn}>
         {props.tryBtn && (
           <Link to="/pricing" className={classes["btn__try"]}>
-            <button className="btn btn-color" content="TRY IT NOW">
+            <button
+              className={`${btnStyle.btn} ${btnStyle.btn__color}`}
+              content="TRY IT NOW"
+            >
               TRY IT NOW
             </button>
           </Link>

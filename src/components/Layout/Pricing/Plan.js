@@ -1,6 +1,7 @@
 import Icon from "../../Icon/Icon";
 import classes from "./Plan.module.scss";
 import { Link } from "react-router-dom";
+import btnStyle from "../../Button/Btn.module.scss";
 function Plan(props) {
   const icon = {
     name: "music_note",
@@ -40,7 +41,7 @@ function Plan(props) {
       </ul>
       <Link to="/payment" className={classes["btn__select"]}>
         <button
-          className="btn"
+          className={btnStyle.btn}
           style={{ backgroundColor: props.content.color }}
         >
           Select

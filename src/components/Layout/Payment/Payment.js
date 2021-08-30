@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import Section from "../Section";
 import classes from "./Payment.module.scss";
+import btnStyle from "../../Button/Btn.module.scss";
 function Payment() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedMeetups, setLoadedMeetups] = useState([]);
@@ -200,7 +201,7 @@ function Payment() {
             <a href="#"> Service</a> &#38; <a href="#">Privacy Policy</a>.
           </small>
           <button
-            className="btn btn-color"
+            className={`${btnStyle.btn} ${btnStyle.btn__color}`}
             content="DOWNLOAD"
             style={{ transform: "scale(0.8)" }}
           >
