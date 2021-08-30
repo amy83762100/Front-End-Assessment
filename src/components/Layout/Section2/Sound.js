@@ -11,40 +11,6 @@ function Sound(props) {
   const audioRef = useRef(null);
   const [parentOffsetTop, setParentOffsetTop] = useState(0);
 
-  // function playMusic() {
-  //   // check if context is in suspended state (autoplay policy)
-  //   if (audioContext.state === "suspended") {
-  //     audioContext.resume();
-  //   }
-  //   // play or pause track depending on state
-  //   if (playing === "false") {
-  //     audioRef.play();
-  //     playing = "true";
-  //   } else if (playing === "true") {
-  //     audioRef.pause();
-  //     playing = "false";
-  //   }
-  // }
-  // let audio;
-  // fetch(music)
-  //   .then((data) => data.arrayBuffer())
-  //   .then((arrayBuffer) => audioContext.decodeAudioData(arrayBuffer))
-  //   .then((decodedAudio) => {
-  //     audio = decodedAudio;
-  //   });
-
-  // function playMusic() {
-  //   const playSound = audioContext.createBufferSource();
-  //   playSound.buffer = audio;
-  //   playSound.connect(audioContext.destination);
-  //   if (audioContext.state === "suspended") {
-  //     !audioContext.currentTime && playSound.start(audioContext.currentTime);
-  //     audioContext.resume();
-  //   } else if (audioContext.state === "running") {
-  //     audioContext.suspend();
-  //   }
-  // }
-
   const cursorRef = useRef(null);
   useEffect(() => {
     // for legacy browsers
