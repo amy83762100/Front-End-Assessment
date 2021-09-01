@@ -1,13 +1,15 @@
+@import "../../../sass/variable";
+@import "../../../sass/mixins";
 .review {
   &__title {
-    font-size: 2.2rem;
+    font-size: $default-font-size-p;
     text-transform: uppercase;
     margin-bottom: 1rem;
-    color: white;
+    color: $color-white;
   }
   q {
-    font-size: 2.2rem;
-    color: #191919;
+    font-size: $default-font-size-p;
+    color: $color-black;
     line-height: 1.6;
   }
   &__stars {

@@ -1,13 +1,25 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import classes from "./Menu.module.scss";
 import { Link } from "react-router-dom";
 const Menu = (props) => {
   const checkbox = useRef(null);
+  const logoRef = useRef(null);
+  const [checkboxChecked, setChecked] = useState(false);
   function closeMenu() {
     checkbox.current.checked = false;
+    setChecked(false);
   }
   function openMenu() {
     checkbox.current.checked = true;
+    setChecked(true);
+  }
+
+  if (logoRef.current) {
+    if (checkboxChecked) {
+      logoRef.current.style.color = props.logoColor;
+    } else {
+      logoRef.current.style.color = "inherit";
+    }
   }
   return (
     <div className={classes.menu} onMouseLeave={closeMenu}>
@@ -18,11 +30,7 @@ const Menu = (props) => {
         ref={checkbox}
       />
 
-      <label
-        htmlFor={props.id}
-        className={classes.menu__button}
-        data-logo-color={props.logoColor}
-      >
+      <label htmlFor={props.id} className={classes.menu__button} ref={logoRef}>
         <span className={classes.menu__icon} onMouseOver={openMenu}>
           &nbsp;
         </span>

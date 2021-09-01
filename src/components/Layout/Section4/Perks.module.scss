@@ -1,3 +1,5 @@
+@import "../../../sass/variable";
+@import "../../../sass/mixins";
 .btn {
   align-self: flex-end;
   justify-self: start;
@@ -9,49 +11,23 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-
+  margin-top: $margin-mid;
   h1 {
-    margin: 2.5rem 0;
+    margin-bottom: $margin-mid;
   }
   .content {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     line-height: 1.2;
-    @media only screen and (max-width: 37.5em) {
+    @include respond(phone) {
       flex-direction: column;
     } //600px
     & > *:not(:last-child) {
-      margin-right: 6rem;
-      @media only screen and (max-width: 37.5em) {
-        margin: 0 0 6rem 0;
+      margin-right: $margin-mid;
+      @include respond(phone) {
+        margin: 0 0 $margin-mid 0;
       } //600px
-    }
-    h2 {
-      &:before {
-        content: " ";
-        background-color: currentColor;
-        height: 2px;
-        width: 8rem;
-        display: block;
-        margin-bottom: 2rem;
-      }
-    }
-    .item {
-      &__red {
-        color: #d34848;
-      }
-      &__blue {
-        color: #1fe1e9;
-      }
-      &__yellow {
-        color: #ffb33f;
-      }
-    }
-
-    p {
-      font-size: 2.2rem;
-      color: white;
     }
   }
 }

@@ -1,3 +1,5 @@
+@import "../../../sass/variable";
+@import "../../../sass/mixins";
 .payment {
   width: 100%;
   height: 100%;
@@ -7,7 +9,7 @@
   letter-spacing: 1px;
   padding-top: 10rem;
   &__title {
-    color: #000000;
+    color: $color-black-dark;
     margin-bottom: 3rem;
   }
   &__form {
@@ -33,15 +35,15 @@
       }
 
       &__basic {
-        color: #d24848;
+        color: $color-primary;
         position: relative;
       }
       &__advanced {
-        color: #ffb33f;
+        color: $color-secondary;
         position: relative;
       }
       &__pro {
-        color: #1fe1e9;
+        color: $color-tertiary;
         position: relative;
       }
       & > *:not(:last-child) {
@@ -50,7 +52,7 @@
       &__button {
         height: 1.5rem;
         width: 1.5rem;
-        border: 2px solid #000000;
+        border: 2px solid $color-black-dark;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -69,7 +71,7 @@
       display: flex;
       justify-content: space-between;
       margin-top: 8rem;
-      @media only screen and (max-width: 37.5em) {
+      @include respond(phone) {
         flex-direction: column;
       } //600px
       label {
@@ -81,19 +83,22 @@
       select {
         margin-top: 0.5rem;
         width: 100%;
-        border: 2px solid #000000;
+        border: 2px solid $color-black-dark;
         padding: 1.2rem 2.3rem;
         font-family: inherit;
         font-size: 1.75rem;
         letter-spacing: 1px;
         &:focus {
-          border-bottom: 4px solid #2f1fe9;
+          border-bottom: 4px solid $color-payment;
         }
       }
       &__billing {
         flex: 1;
         margin-right: 20rem;
-        @media only screen and (max-width: 37.5em) {
+        @include respond(tab-port) {
+          margin-right: $margin-big;
+        }
+        @include respond(phone) {
           margin: 0 0 5rem 0;
         } //600px
       }
@@ -127,12 +132,12 @@
       font-size: 1.375rem;
       line-height: 1.5;
       margin-bottom: 3rem;
-      @media only screen and (max-width: 37.5em) {
+      @include respond(phone) {
         width: 100%;
       } //600px
       a {
         text-decoration: none;
-        color: #2f1fe9;
+        color: $color-payment;
         font-weight: bold;
       }
     }

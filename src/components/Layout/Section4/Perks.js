@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
 import Section from "../Section";
+import Perk from "./Perk";
 import classes from "./Perks.module.scss";
 import btnStyle from "../../Button/Btn.module.scss";
 function Perks(props) {
+  let titleColor = {
+    titleColor01: props.titleColor || "#d24848",
+    titleColor02: props.titleColor || "#1fe1e9",
+    titleColor03: props.titleColor || "#ffb33f",
+  };
   return (
     <Section
       mainColor={props.mainColor}
@@ -25,44 +31,19 @@ function Perks(props) {
       </div>
       <div className={classes.perks}>
         <h1>Perks</h1>
-
-        <div className={classes.content}>
-          <div>
-            <h2
-              className={classes["item__red"]}
-              style={{ color: props.titleColor }}
-            >
-              Subscription Payment Model
-            </h2>
-            <p style={{ color: props.textColor }}>
-              No commitment, cancel anytime. Never worry about forgetting a
-              payment again!
-            </p>
-          </div>
-          <div>
-            <h2
-              className={classes["item__blue"]}
-              style={{ color: props.titleColor }}
-            >
-              No Fee Cancelation Policy
-            </h2>
-            <p style={{ color: props.textColor }}>
-              No commitment, cancel anytime. Never worry about forgetting a
-              payment again!
-            </p>
-          </div>
-          <div>
-            <h2
-              className={classes["item__yellow"]}
-              style={{ color: props.titleColor }}
-            >
-              Subscription Payment Model
-            </h2>
-            <p style={{ color: props.textColor }}>
-              No commitment, cancel anytime. Never worry about forgetting a
-              payment again!
-            </p>
-          </div>
+        <div className={classes.content} style={{ color: props.textColor }}>
+          <Perk
+            title="Subscription Payment Model"
+            titleColor={titleColor.titleColor01}
+          />
+          <Perk
+            title="No Fee Cancellation Policy"
+            titleColor={titleColor.titleColor02}
+          />
+          <Perk
+            title="Subscription Payment Model"
+            titleColor={titleColor.titleColor03}
+          />
         </div>
       </div>
     </Section>

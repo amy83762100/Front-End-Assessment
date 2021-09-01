@@ -1,3 +1,5 @@
+@import "../../../sass/variable";
+@import "../../../sass/mixins";
 .plan {
   letter-spacing: 1.5px;
   &__name {
@@ -24,7 +26,7 @@
   &__features {
     list-style: none;
     font-size: 3rem;
-    color: #fff;
+    color: $color-white;
     margin: 2rem 0;
     li {
       margin-bottom: 1rem;
@@ -36,7 +38,7 @@
   .btn__select {
     button {
       width: 21rem;
-      color: #fff;
+      color: $color-white;
     }
   }
 }

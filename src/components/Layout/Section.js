@@ -5,28 +5,31 @@ function Section(props) {
   let menu = {
     backgroundColor: "#0B0B0B",
     logoDefaultColor: "#FFFFFF",
-    logoColor: props.mainColor,
+    logoColor: "#FFFFFF",
     selectColor: props.mainColor,
   };
   let backgroundColor;
   switch (props.mainColor) {
     case "red":
       backgroundColor = "#D34848";
+      menu.logoColor = backgroundColor;
       break;
     case "blue":
       backgroundColor = "#1FE1E9";
+      menu.logoColor = backgroundColor;
       break;
     case "yellow":
       backgroundColor = "#FFB33F";
+      menu.logoColor = backgroundColor;
       break;
     case "black":
       menu.backgroundColor = "#1FE1E9";
-      menu.logoColor = "white";
+      menu.logoColor = "#FFFFFF";
       backgroundColor = "#0B0B0B";
       break;
     default:
       menu.backgroundColor = "#0B0B0B";
-      menu.logoColor = "red";
+      menu.logoColor = "#D34848";
       menu.selectColor = "red";
       backgroundColor = "#FFFFFF";
       menu.logoDefaultColor = "#0B0B0B";

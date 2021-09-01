@@ -1,8 +1,10 @@
+@import "../../sass/variable";
+@import "../../sass/mixins";
 .section {
   position: relative;
   height: 100vh;
   width: 100%;
-  color: white;
+  color: $color-white;
   overflow: hidden;
   padding: 4rem 10rem 10rem 10rem;
 
@@ -11,13 +13,13 @@
   align-items: center;
   justify-content: space-between;
 
-  @media only screen and (max-width: 37.5em) {
+  @include respond(phone) {
     padding: 4rem 5rem 10rem 5rem;
     height: fit-content !important;
     flex-direction: column;
 
     & > *:last-child {
-      margin-top: 5rem;
+      margin-top: $margin-mid;
       height: fit-content;
     }
   } //600px

@@ -1,3 +1,5 @@
+@import "../../sass/variable";
+@import "../../sass/mixins";
 .menu {
   color: inherit;
   &__checkbox {
@@ -100,18 +102,18 @@
     font-size: 3rem;
     letter-spacing: 0.5rem;
   }
-  &__checkbox:checked ~ [data-logo-color="red"] {
-    color: #d34848;
-  }
-  &__checkbox:checked ~ [data-logo-color="blue"] {
-    color: #1fe1e9;
-  }
-  &__checkbox:checked ~ [data-logo-color="white"] {
-    color: #ffffff;
-  }
-  &__checkbox:checked ~ [data-logo-color="yellow"] {
-    color: #ffb33f;
-  }
+  // &__checkbox:checked ~ [data-logo-color="red"] {
+  //   color: #d34848;
+  // }
+  // &__checkbox:checked ~ [data-logo-color="blue"] {
+  //   color: #1fe1e9;
+  // }
+  // &__checkbox:checked ~ [data-logo-color="white"] {
+  //   color: #ffffff;
+  // }
+  // &__checkbox:checked ~ [data-logo-color="yellow"] {
+  //   color: #ffb33f;
+  // }
   //ICON
   &__icon {
     position: relative;

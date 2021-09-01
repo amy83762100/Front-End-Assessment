@@ -1,7 +1,9 @@
+@import "../../../sass/variable";
+@import "../../../sass/mixins";
 .btn {
   align-self: flex-end;
   justify-self: start;
-  color: #ffb33f;
+  color: $color-secondary;
   &__try {
     color: inherit;
   }
@@ -10,7 +12,8 @@
   display: flex;
   height: 100%;
   width: 100%;
-  @media only screen and (max-width: 37.5em) {
+  margin-top: $margin-big;
+  @include respond(phone) {
     flex-direction: column;
   } //600px
   &__right {
@@ -20,10 +23,10 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    color: #ffb33f;
+    color: $color-secondary;
     margin-left: 3rem;
     z-index: 1;
-    @media only screen and (max-width: 37.5em) {
+    @include respond(phone) {
       margin: 10rem 0 0 0;
     } //600px
 
@@ -51,7 +54,7 @@
       background-size: 140%;
       border-radius: 50%;
       position: absolute;
-      @media only screen and (max-width: 37.5em) {
+      @include respond(phone) {
         display: none;
         opacity: 0;
       } //600px
@@ -92,11 +95,11 @@
         font-size: 1.56rem;
         font-weight: bold;
         letter-spacing: 1px;
-        color: #000;
+        color: $color-black-dark;
         width: 9rem;
         height: 9rem;
         border-radius: 50%;
-        border: 2px solid #000;
+        border: 2px solid $color-black-dark;
       }
     }
   }

@@ -1,12 +1,14 @@
+@import "../../../sass/variable";
+@import "../../../sass/mixins";
 .footer {
   position: relative;
   height: 50vh;
   width: 100%;
-  background-color: #5e33d1;
-  color: white;
+  background-color: $color-quaternary;
+  color: $color-white;
   overflow: hidden;
   display: flex;
-  padding: 10rem;
+  padding: 5rem;
 
   display: flex;
   flex-direction: column;
@@ -15,16 +17,19 @@
 
   letter-spacing: 1px;
 
-  @media only screen and (max-width: 37.5em) {
-    padding: 10rem 5rem;
-  } //600px
+  @include respond(tab-port) {
+    height: fit-content;
+  }
   &__email {
     align-self: start;
     display: flex;
     align-items: center;
-    font-size: 2.2rem;
+    font-size: $default-font-size-p;
     & > *:first-child {
       margin-right: 1rem;
+    }
+    @include respond(tab-port) {
+      margin-bottom: $margin-mid;
     }
   }
   &__logo--box {

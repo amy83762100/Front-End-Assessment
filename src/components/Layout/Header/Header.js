@@ -13,7 +13,7 @@ const Header = (props) => {
       <Slider slides={slides}>
         <Menu
           backgroundColor="#1FE1E9"
-          logoColor="white"
+          logoColor="#FFFFFF"
           selectColor="black"
           id="menu1"
         />
